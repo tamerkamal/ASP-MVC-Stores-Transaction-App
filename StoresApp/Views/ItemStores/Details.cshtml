@@ -1,0 +1,43 @@
+﻿@model StoresApp.Models.ItemStore
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ItemStore</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ISQ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISQ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Store.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Store.Code)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
